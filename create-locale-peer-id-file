@@ -1,0 +1,5 @@
+#!/bin/sh
+dir="${1:-.}"
+file="$dir/.locale-peer-id"
+test -f "$file" || 
+printf %s\\n "$(zid)" > "$file"
